@@ -1,0 +1,7 @@
+{
+    "name": "counter",
+    "includedFiles": ["counter.v"],
+    "testBenches": ["counter_tb.v"],
+    "constraintsFile": "dummy.cst",
+    "top": "counter"
+}

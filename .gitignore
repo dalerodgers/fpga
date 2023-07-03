@@ -1,0 +1,5 @@
+impl/
+*.o
+*.html
+*.gprj.user
+*.vcd
