@@ -20,7 +20,7 @@ module test();
     enable = 0;
     #40
     enable = 1;
-    #130
+    #160
     enable = 0;
 
     #13000 $finish;
