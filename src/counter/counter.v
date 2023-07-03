@@ -23,7 +23,7 @@ localparam delay_tCSSR = 4'd1 - 4'd1;
 localparam delay_tLO   = 4'd1 - 4'd1;
 localparam delay_tHIGH = 4'd1 - 4'd1;
 
-localparam dataStart = 16'b0001000000000000;
+localparam dataStart = 16'b0001000000001111;
 localparam dataIncrement = 16;
 
 reg [3:0] clockCounter;
