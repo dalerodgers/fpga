@@ -5,7 +5,7 @@
 //Part Number: GW2AR-LV18QN88C8/I7
 //Device: GW2AR-18
 //Device Version: C
-//Created Time: Mon 07 03 16:53:18 2023
+//Created Time: Tue 07 04 08:19:02 2023
 
 IO_LOC "SDO" 17;
 IO_PORT "SDO" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
