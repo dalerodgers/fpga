@@ -44,7 +44,7 @@ initial begin
     state <= state_CS_HIGH;
 end
 
-always @(clk) begin
+always @(posedge clk) begin
     if( !enable ) begin
         dacCount <= 0;
 

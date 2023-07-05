@@ -3,5 +3,6 @@
     "includedFiles": ["top.v", "../counter/counter.v"],
     "testBenches": ["top_tb.v"],
     "constraintsFile": "dummy.cst",
-    "top": "top"
+    "top": "top",
+    "board": "tangnano20k"
 }
