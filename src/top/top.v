@@ -10,8 +10,18 @@ output CS;
 output SCLK;
 output SDO;
 
+`define USE_PLL
+
+`ifdef USE_PLL
+Gowin_rPLL your_instance_name(
+        .clkout(CLK_OUT),
+        .clkin(CLK_IN)
+    );
+`endif
+
 counter c( CLK_OUT, enable, CS, SCLK, SDO );
 
+`ifndef USE_PLL
 `define divisor 200
 
 reg clk_out;
@@ -43,5 +53,6 @@ end else begin
 end
 
 assign CLK_OUT = clk_out;
+`endif
 
 endmodule
