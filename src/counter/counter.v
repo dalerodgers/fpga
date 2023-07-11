@@ -29,19 +29,19 @@ localparam dataIncrement = 16;
 reg [3:0] clockCounter;
 
 reg cs, sclk;
-reg [3:0] state;
+reg [2:0] state;
 reg [3:0] delay;
 reg [11:0] dacCount;
 reg [15:0] dataOut;
 
 initial begin
-    dacCount <= 0;
+    dacCount = 0;
 
-    cs <= 1;
-    sclk <= 0;
+    cs = 1;
+    sclk = 0;
 
-    delay <= delay_tCSH;
-    state <= state_CS_HIGH;
+    delay = delay_tCSH;
+    state = state_CS_HIGH;
 end
 
 always @(posedge clk) begin
@@ -61,7 +61,7 @@ always @(posedge clk) begin
                 if( delay == 0 ) begin
                     cs <= 0;
                     clockCounter <= 0;
-                    dataOut <= dataStart | dacCount;
+                    dataOut <= dataStart | { 4'b0000, dacCount };
 
                     if( delay_tCSSR == 0 ) begin
                         delay <= delay_tLO;
@@ -110,6 +110,9 @@ always @(posedge clk) begin
                         state <= state_CS_HIGH;
                     end
                 end
+            end
+
+            default: begin
             end
         endcase
     end

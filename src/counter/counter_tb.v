@@ -23,7 +23,7 @@ module test();
     #160
     enable = 0;
 
-    #13000 $finish;
+    #1300 $finish;
   end
 
   initial begin
