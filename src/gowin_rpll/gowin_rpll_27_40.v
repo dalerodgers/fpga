@@ -5,7 +5,7 @@
 //Part Number: GW2AR-LV18QN88C8/I7
 //Device: GW2AR-18
 //Device Version: C
-//Created Time: Tue Jul 18 13:47:23 2023
+//Created Time: Tue Jul 18 13:48:51 2023
 
 module Gowin_rPLL (clkout, clkin);
 

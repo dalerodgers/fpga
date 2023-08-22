@@ -21,9 +21,9 @@ module test();
     #40
     enable = 1;
     #160
-    enable = 0;
+    //enable = 0;
 
-    #1300 $finish;
+    #2600 $finish;
   end
 
   initial begin

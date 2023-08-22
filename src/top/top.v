@@ -1,14 +1,18 @@
 module top(
-    CLK_IN, enable, CS, SCLK, SDO
+    CLK_IN, enable1, CS1, SCLK1, SDO1, enable2, CS2, SCLK2, SDO2
 );
 
 input CLK_IN;
 wire CLK_OUT;
 
-input enable;
-output CS;
-output SCLK;
-output SDO;
+input enable1;
+output CS1;
+output SCLK1;
+output SDO1;
+input enable2;
+output CS2;
+output SCLK2;
+output SDO2;
 
 `define USE_PLL
 
@@ -19,7 +23,8 @@ Gowin_rPLL your_instance_name(
     );
 `endif
 
-counter c( CLK_OUT, enable, CS, SCLK, SDO );
+counter c1( CLK_OUT, enable1, CS1, SCLK1, SDO1 );
+counter c2( CLK_OUT, enable2, CS2, SCLK2, SDO2 );
 
 `ifndef USE_PLL
 `define divisor 200
